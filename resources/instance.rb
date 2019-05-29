@@ -25,7 +25,7 @@ end
 actions :add_server, :add_remote_server
  
 attribute :server_name,      :kind_of => String, :name_attribute => true
-attribute :create_service,   :kind_of => TrueClass, :default => false
+attribute :create_service,   :kind_of => TrueClass, :default => true
 attribute :service_name,     :kind_of => String
 attribute :server_dir,       :kind_of => String
 attribute :host,             :kind_of => String
@@ -36,4 +36,4 @@ attribute :admin_port,       :kind_of => Integer
 attribute :admin_username,   :kind_of => String
 attribute :admin_password,   :kind_of => String
 attribute :lb_factor,        :kind_of => Integer, :default => 1
-attribute :https,            :kind_of => TrueClass, :default => false
+attribute :https,            :kind_of => [TrueClass, FalseClass], :default => false
